@@ -19,7 +19,7 @@ var swiper = new Swiper(".home", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-      delay: 2500,
+      delay: 4500,
       disableOnInteraction: false,
     },
     pagination: {
@@ -55,3 +55,17 @@ var swiper = new Swiper(".home", {
       header.classList.remove("sticky");
     }
   })
+
+  // scroll reaveal
+  function revealFunction(){
+    window.sr = ScrollReveal( {duration:1350, distance: '250px', easing:'ease-out'});
+
+    sr.reveal('.reveal-left', {origin:'left', reset:false});
+    sr.reveal('.reveal-top', {origin:'top', reset:false});
+  }
+
+
+  window.addEventListener('load', ()=>{
+    revealFunction();
+  })
+
