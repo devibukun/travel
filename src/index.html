@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="input.css">
+  <title>Travel Website</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+
+  <!-- ------ Header -------- -->
+     <header id="nav-bar" class=" fixed w-full top-0 left-0 z-10 ">
+        <nav class="container flex items-center justify-between h-16 sm:h-20">
+          <div class="sm:text-4xl font-Lobster">Travel</div>
+
+          <div id="nav-menu" class="absolute top-0 left-[-100%] min-h-[80vh] w-full bg-white-300/80
+          backdrop-blur-sm flex items-center justify-center duration-300  lg:static lg:min-h-fit 
+          lg:bg-transparent lg:w-auto lg:backdrop-filter-none">
+            <ul class="flex flex-col items-center gap-8 lg:flex-row">
+              <li>
+                <a href="#home" class="nav-link">Home</a>
+              </li>
+
+              <li>
+                <a href="#about" class="nav-link">About</a>
+              </li>
+
+              <li>
+                <a href="#destinations" class="nav-link">Destinations</a>
+              </li>
+
+              <li>
+                <a href="#contact" class="nav-link">Contact </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-xl sm:text-4xl cursor-pointer z-50 lg:hidden">
+            <i class='bx bx-menu' id="hamburger"></i>
+          </div>
+        </nav>
+     </header>
+
+     <!-- -------HOME SECTION ------ -->
+      <section class="home swiper z-50" id="home">
+        <div class="swiper-wrapper relative  ">
+
+          <div class="swiper-slide image">
+            <img src="images/bali.avif" alt="" class="swiper-img">
+            
+            <div class="home-text">
+              <span class="animate-span">"Discover Paradise Across The Globe"</span>
+              <h1>Explore the Stunning <br>Beach of Bali.</h1>
+              <a href="#" class="btn">Start Your Journey</a>
+            </div>
+            
+          </div>
+
+          <div class="swiper-slide image">
+            <img src="images/maldives.avif" alt="" class="swiper-img">
+
+            <div class="home-text">
+              <span class="animate-span">"Discover Paradise Across The Globe"</span>
+              <h1>Explore the Stunning <br>Beach of Maldives.</h1>
+              <a href="#" class="btn">Start Your Journey</a>
+            </div>
+
+          </div>
+          
+          <div class="swiper-slide image">
+            <img src="images/huwaii.avif" alt="" class="swiper-img">
+            
+            <div class="home-text">
+              <span class="animate-span">"Discover Paradise Across The Globe"</span>
+              <h1>Explore the Stunning <br>Beach of Bali.</h1>
+              <a href="#" class="btn">Start Your Journey</a>
+            </div>
+
+          </div>
+          </div> 
+       
+        <div class="swiper-pagination"></div>
+      </div>
+      </section>
+      <section id="about" class="text-black justify-center  ml-auto mr-auto lg:grid items-center lg:gap-6  h-screen sm:w-full lg:grid-cols-[repeat(auto-fit,minmax(21rem,auto))]">
+        <div class="flex flex-row text-center items-center justify-center  sm:h-1/2 lg:container p-4">
+       <img src="images/about.avif" alt="" class="  h-1/3  border rounded-2xl sm:w-full sm:h-full w-2/3">
+      </div>
+        <div class="about-container container ">
+          <h2 class="text-center font-bold   sm:text-4xl m-4 font-Lobster">Welcome to Travel</h2>
+          <p class="text-xl">At Travel, we  believe travelling is more than just a journey- it's an opportunity breathtaking beauty. Travel is a platform built bt travel enthusiasts. Our team is 
+            dedicated to curating the best Destinations, travel tips, and guides to help you plan your perfect adventure. We understand the challenges of planning a trip, 
+            so we've made it our mission to simplift the process and inspire your next journey.
+              <span class="read-more-text">Our mission is to make travel planning effortlessly,
+                exicting, and inspiring for everyone. To connect people with beauty of the world
+                and create a community of passionate travelers. <b>The world is waiting to be explored. Let's 
+                  make your travel dreams a reality.</b>
+              </span>
+        </p>
+          <a href="#" class="read-more-btn text-xl text-blue-500  flex items-center justify-between">Read More....</a>
+        </div>
+      </div>
+      
+      </section>
+    
+ <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->

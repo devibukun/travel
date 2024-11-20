@@ -1,0 +1,103 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&display=swap');
+
+
+/* @import url('https:fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=>swap'); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  @apply text-white tracking-wider font-Jost overflow-x-hidden;
+}
+#nav-bar.sticky{
+  @apply bg-blue-600;
+}
+
+.nav-link{
+  @apply text-lg font-bold duration-300 transition;
+}
+
+.nav-link:hover{
+  @apply text-black pb-4;
+}
+
+.image{
+  min-height: 550px;
+  position: relative;
+  width: 100%;
+  
+}
+.swiper-img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.swiper-pagination-bullet{
+  @apply p-2;
+}
+.swiper-pagination-bullet-active{
+  @apply bg-white !important;
+}
+.home-text{
+  @apply absolute  left-1/2 top-1/2   font-Jost text-center w-full  -translate-x-1/2 -translate-y-1/2 
+}
+.home-text span{
+  animation: animate  4s forwards;
+  @apply  text-2xl font-medium tracking-wide lg:text-3xl 
+}
+.home-text h1{
+  animation: animate 4s forwards;
+  transition: all 0.5 ease-in-out;
+  @apply  lg:text-5xl  lg:font-extrabold tracking-wide  font-semibold text-3xl  mb-4 
+}
+/* h1 span{
+  color: transparent;
+  -webkit-text-stroke: 30px  white;
+} */
+.btn{
+  animation: animate 4s forwards;
+  @apply bg-black p-2 text-center rounded-lg font-bold w-1/2
+}
+.btn:hover{
+  @apply bg-blue-300 text-black 
+}
+#about{  
+  grid-template-columns: repeat(auto-fit, minmax(21rem, auto)); 
+  /* background-image: url(images/background-photo2.avif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  @apply w-screen h-screen
+}
+.read-more-text{
+  display: none;
+}
+.read-more-text-show{
+  display: inline;
+}
+@keyframes animate{
+    0%{
+      transform:translateX(-50%);
+      opacity: 0
+    }
+    50%{
+      opacity: 0.2;
+    }
+    70%{
+      opacity: 0.5;
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(-0%);
+    }
+  }
+  
